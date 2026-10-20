@@ -1,0 +1,11 @@
+{
+  "name": "identity-prompt-studio-vercel",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check api/index.js && node --check lib/worker-core.js && node --check private/app.js"
+  }
+}

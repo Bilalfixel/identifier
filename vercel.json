@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": null,
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "private/**",
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/api/index?ips_route=home" },
+    { "source": "/index.html", "destination": "/api/index?ips_route=html" },
+    { "source": "/app.js", "destination": "/api/index?ips_route=script" },
+    { "source": "/style.css", "destination": "/api/index?ips_route=style" },
+    { "source": "/api/config", "destination": "/api/index?ips_route=config" },
+    { "source": "/api/generate", "destination": "/api/index?ips_route=generate" },
+    { "source": "/health", "destination": "/api/index?ips_route=health" }
+  ]
+}
